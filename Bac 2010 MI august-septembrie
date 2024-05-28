@@ -1,39 +1,4 @@
-// Subiectul I
-// 1. a.
-// 2. a. 44543
-// b. 420, 820, 920
-// c.
-repetă
-	instrucțiuni
-până când
-
-instrucțiuni
-cât timp not condiție execută
-	instrucțiuni
-// d.
-#include <iostream>
-using namespace std;
-
-int main()
-{
-    int n, m, c;
-    cin >> n;
-    m = 0;
-    do
-    {
-        c = n % 10;
-        n /= 10;
-        if (c > 5)
-            c /= 2;
-        m = m * 10 + c;
-    } while (n != 0);
-    cout << m;
-    return 0;
-}
-
 // Subiectul al II-lea
-// 1. d. (neintensiv) b. (intensiv)
-// 2. b.
 // 3.
 #include <iostream>
 using namespace std;
@@ -56,7 +21,7 @@ int main()
     }
     return 0;
 }
-// 4. 3, 4, 8
+
 // 5.
 #include <iostream>
 #include <cstring>
@@ -80,8 +45,6 @@ int main()
 }
 
 // Subiectul al III-lea
-// 1. d.
-// 2. (garoafă, frezie, mac, lalea, narcisă), (garoafă, frezie, mac, narcisă, lalea)
 // 3.
 #include <iostream>
 using namespace std;
@@ -106,6 +69,7 @@ int main()
         cout << a[i] << " ";
     return 0;
 }
+
 // 4.
 // a.
 #include <iostream>
