@@ -11,7 +11,7 @@ int main()
         for (j = 0; j < n; j++)
 	{
 		// a[i][j] = 2 * i + j + 1; (neintensiv)
-		// a[i][j] = 5 * j + i + 1; (intensiv)
+		a[i][j] = 5 * j + i + 1; (intensiv)
 	}
     for (i = 0; i < n; i++)
     {
@@ -85,12 +85,13 @@ int main()
     for (i = 0; i < 10000; i++)
     {
         // if (a[i] > 0 && i % 2 == 0) (neintensiv)
-        // if (a[i] == 1) (intensiv)
+        if (a[i] == 1) (intensiv)
             cout << i << " ";
     }
     f.close();
     return 0;
 }
+
 // b.
 Descrierea algoritmului:
 Programul citește numerele naturale din fișierul "BAC.TXT" și stabilește frecvența fiecăruia în vectorul a. Apoi, parcurge vectorul și afișează toate numerele pare care au apărut în fișier cel puțin o dată (afișează toate numerele care au apărut în fișier o singură dată.
