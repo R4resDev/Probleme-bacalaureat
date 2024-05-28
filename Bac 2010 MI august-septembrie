@@ -32,7 +32,7 @@ int main()
 }
 
 // Subiectul al II-lea
-// 1. d.
+// 1. d. (neintensiv) b. (intensiv)
 // 2. b.
 // 3.
 #include <iostream>
@@ -44,7 +44,10 @@ int main()
     cin >> n;
     for (i = 0; i < n; i++)
         for (j = 0; j < n; j++)
-            a[i][j] = 2 * i + j + 1;
+	{
+		// a[i][j] = 2 * i + j + 1; (neintensiv)
+		// a[i][j] = 5 * j + i + 1; (intensiv)
+	}
     for (i = 0; i < n; i++)
     {
         for (j = 0; j < n; j++)
@@ -111,19 +114,22 @@ using namespace std;
 
 int main()
 {
-    int n, a[10000]={0}, i;
+    int n, a[10000] = {0}, i;
     ifstream f("BAC.TXT");
     while (f >> n)
         a[n]++;
     for (i = 0; i < 10000; i++)
-        if (a[i] > 0 && i % 2 == 0)
+    {
+        // if (a[i] > 0 && i % 2 == 0) (neintensiv)
+        // if (a[i] == 1) (intensiv)
             cout << i << " ";
+    }
     f.close();
     return 0;
 }
 // b.
 Descrierea algoritmului:
-Programul citește numerele naturale din fișierul "BAC.TXT" și stabilește frecvența fiecăruia în vectorul a. Apoi, parcurge vectorul și afișează toate numerele pare care au apărut în fișier cel puțin o dată.
+Programul citește numerele naturale din fișierul "BAC.TXT" și stabilește frecvența fiecăruia în vectorul a. Apoi, parcurge vectorul și afișează toate numerele pare care au apărut în fișier cel puțin o dată (afișează toate numerele care au apărut în fișier o singură dată.
 
 Eficiența algoritmului:
 Algoritmul este eficient din punct de vedere al memoriei, având o complexitate constantă O(1), deoarece nu reține nicăieri numerele din fişier, indiferent de dimensiunea fișierului sau de valoarea lui n, iar vectorul de frecvență are o dimensiune fixă de 10000 de elemente.
